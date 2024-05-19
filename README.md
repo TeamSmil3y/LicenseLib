@@ -12,9 +12,9 @@ Retrieve package info from PyPI:
 from licenselib import pypi
 
 pkg = pypi.get_package('licenselib')
-print(pkg) # prints all pkg data
+print(pkg) # all pkg data
 
 dependencies = pkg.dependencies
-print(dependencies) # prints all pkg dependencies as list including version
+print(dependencies) # pkg dependencies as list including version
 ```
 
