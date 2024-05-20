@@ -18,5 +18,15 @@ print(pkg) # all pkg data
 
 dependencies = pkg.dependencies
 print(dependencies) # pkg dependencies as list including version
+
+# for locally installed packages you may use:
+license: License = get_local_licenses(['requests'])[0]
+print(license) # license metadata
+print(license.licensetext) # full licensetext
+
+# for remote packages you could use: (note: this will install the package temporarily though!)
+license = get_licenses_unsafe(['django'])[0]
+print(license)
+print(license.licensetext)
 ```
 
