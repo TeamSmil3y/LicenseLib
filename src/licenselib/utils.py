@@ -7,5 +7,10 @@ class DataContainer:
                 setattr(self, key, value)
 
     def __repr__(self):
-        attributes = {key: getattr(self, key) for key in dir(self) if not key.startswith('__')}
-        return f'DataContainer(**{attributes.__str__()})'
+        attributes = {}
+        for key in dir(self):
+            value = getattr(self, key)
+            if not key.startswith('_') and not callable(value):
+                print(4, key, value)
+                attributes[key] = value
+        return f'{type(self).__name__}(**{attributes.__str__()})'
