@@ -11,7 +11,7 @@ python3 -m pip install --user licenselib
 # Usage
 Retrieve package info from PyPI:
 ```python
-from licenselib import pypi
+from licenselib import pypi, License
 
 pkg = pypi.get_package('licenselib')
 print(pkg) # all pkg data
@@ -25,7 +25,7 @@ print(license) # license metadata
 print(license.licensetext) # full licensetext
 
 # for remote packages you could use: (note: this will install the package temporarily though!)
-license = get_licenses_unsafe(['django'])[0]
+license: License = get_licenses_unsafe(['django'])[0]
 print(license)
 print(license.licensetext)
 ```
