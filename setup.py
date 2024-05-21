@@ -1,7 +1,7 @@
 from setuptools import setup
 from pathlib import Path
 
-this_directory = Path(__file__).parent.parent
+this_directory = Path(__file__).parent
 
 setup(
     long_description=this_directory.joinpath('README.md').read_text(),
