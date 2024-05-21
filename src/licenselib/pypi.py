@@ -147,8 +147,9 @@ def get_package(pkg_name: str) -> Package | None:
 
 
 if __name__ == '__main__':
+    # run some tests
     from rich import print
-    test = lambda i: print(f'\n[bold green]TESTCASE #{i}:[/]')
+    def test(i): print(f'\n[bold green]TESTCASE #{i}:[/]')
 
     test(1)
     pkg = get_package('PyDooray')
