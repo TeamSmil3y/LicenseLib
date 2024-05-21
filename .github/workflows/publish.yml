@@ -17,5 +17,5 @@ jobs:
       - name: Publish package dist to PiPy
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          user: __token__
+          user: lstuma
           password: ${{ secrets.PIPY_API_TOKEN }}
