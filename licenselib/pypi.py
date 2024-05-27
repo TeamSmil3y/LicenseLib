@@ -28,7 +28,7 @@ def api_call(pkg_name: str) -> dict | None:
     :param pkg_name: Name of the package
     :return: dict of json data or None on failure
     """
-    url = f'https://pypi.org/pypi/{pkg_name}/json'
+    url = f'https://pypi.org/pypi/{requests.utils.quote(pkg_name)}/json'
     response = requests.get(url)
 
     if response.status_code == 200:
