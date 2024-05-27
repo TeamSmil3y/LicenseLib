@@ -29,7 +29,7 @@ license: License = get_licenses_unsafe(['django'])[0]
 print(license)
 print(license.licensetext)
 ```
-Retrieve packages from GitHub
+Retrieve packages from GitHub:
 ```python
 from licenselib import github, License
 
